@@ -6,7 +6,7 @@
   font-family: "source sans pro", montserrat;
 }
 
-main {
+#main {
   height: 100vh;
   background: url("./Images/banner.png");
   background-size: cover;
