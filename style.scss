@@ -4,8 +4,33 @@
   box-sizing: border-box;
   font-family: "source sans pro", montserrat;
 }
+body {
+  // background: #ece9e6; /* fallback for old browsers */
+  // background: -webkit-linear-gradient(
+  //   to right,
+  //   #ffffff,
+  //   #ece9e6
+  // ); /* Chrome 10-25, Safari 5.1-6 */
+  // background: linear-gradient(
+  //   to right,
+  //   #ffffff,
+  //   #ece9e6
+  // ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #403b4a; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #e7e9bb,
+    #403b4a
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #e7e9bb,
+    #403b4a
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
 main {
-  height: 100vh;
+  position: relative;
+  height: 600px;
   background: url("./Images/banner.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -32,7 +57,7 @@ main {
 .title {
   font-style: normal;
   font-weight: bold;
-  font-size: 64px;
+  font-size: 54px;
   line-height: 141.7%;
   /* or 91px */
   letter-spacing: 0.01em;
@@ -47,9 +72,9 @@ main {
   border-radius: 3px;
 }
 .main-caption,
-blockquote {
+blockquote.main_quote {
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 18px;
   line-height: 141.7%;
   /* or 34px */
@@ -58,24 +83,28 @@ blockquote {
   margin-top: 0.5em;
   cite {
     float: right;
-    margin-top: 0.3em;
+    margin-top: 1.5em;
   }
-}.blog{
+}
+.blog {
   height: 100vh;
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
 }
 article {
-  box-shadow: 1px 1px 2px #3f3d56;
+  // box-shadow: 1px 1px 2px #e7e7e7;
+  // border: 1px solid #e7e7e7;
   padding: 10px 20px;
   width: 100%;
   max-width: 950px;
-  margin: auto;
-  margin-top: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .content {
-  background-color: #3f3d56;
+  background-color: #403b4a;
   padding: 15px;
 
   h2 {
@@ -97,7 +126,7 @@ article {
     margin-top: 1em;
     margin-bottom: 0.7em;
   }
-  .btn-container{
+  .btn-container {
     margin: 20px auto;
   }
   a.btn {
@@ -112,5 +141,77 @@ article {
     border-radius: 6px;
     margin-top: 1rem;
     padding: 9px 20px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .container {
+    margin: 0 auto;
+  }
+  .title {
+    font-size: 48px;
+  }
+  blockquote.main_quote {
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 141.7%;
+    /* or 34px */
+    letter-spacing: 0.01em;
+    color: #efefef;
+    margin-top: 0.5em;
+    cite {
+      float: right;
+      margin-top: 1.5em;
+    }
+  }
+  article {
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    h2 {
+      font-size: 18px;
+    }
+    p {
+      font-size: 10px;
+    }
+    .img {
+      width: 100%;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .content {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .title {
+    font-size: 38px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .container {
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
+  }
+  .title {
+    font-size: 25px;
+  }
+  .sub {
+    font-size: 14px;
+  }
+  blockquote.main_quote {
+    font-size: 12px;
+    width: 100%;
+  }
+  article {
+    min-width: 300px;
+    width: 80%;
+    h2 {
+      font-size: 18px;
+    }
   }
 }
