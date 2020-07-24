@@ -1,18 +1,17 @@
 #nav{
-    margin-top: 20px;
     width: 100%;
-    display: inline-block;
-    text-align: center;
-    position: sticky;
-    position: -webkit-sticky;
+    height: 20px;
+    top: 0;
+    padding: 0;
+    overflow: hidden;
+    
     background-color: rgb(95, 216, 210);
-
-
-
+   
 
 }
 
 li{
+    list-style: none;
     padding-right: 30px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     display: inline-block;
@@ -26,27 +25,23 @@ a{
 
 body{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
 }
 
-p{
-}
 
-.container{
-    display: inline-flex;
+
+
+div.content{
+    float: left;
+    background-color: lightcoral;
+    width: 80%;
     flex-wrap: wrap;
     width: fit-content;
 }
-.container>div{
-    width: 300px;
-    padding: 20px;
-    margin: 20px;
-    background-color: rgb(48, 43, 77);
-   
-}
 
-.container>div.ads{
-    width: 300px;
-    padding: 20px;
-    background-color: rgb(48, 43, 77);
-   
+div.ads{
+    background-color: lightcoral;
+    width: 20%;
+    flex-wrap: wrap;
+    width: fit-content;
 }
